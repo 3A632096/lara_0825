@@ -49,7 +49,9 @@ Route::get('/', function () {
 //    $post=\App\Post::find(1);
 //    $post->delete();
 
-    \App\Post::destroy(2);
+//    \App\Post::destroy(2);
+
+    \App\Post::destroy(3,5,7);
 
     return view('welcome');
 });
