@@ -46,9 +46,10 @@ Route::get('/', function () {
 //    $post->save();
 
 //刪除資料
-    $post=\App\Post::find(1);
-    $post->delete();
+//    $post=\App\Post::find(1);
+//    $post->delete();
 
+    \App\Post::destroy(2);
 
     return view('welcome');
 });
