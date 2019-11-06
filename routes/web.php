@@ -40,10 +40,15 @@ Route::get('/', function () {
 //        'content'=>'updated content',
 //    ]);
 
+//    $post=\App\Post::find(1);
+//    $post->title='saved title';
+//    $post->content='saved content';
+//    $post->save();
+
+//刪除資料
     $post=\App\Post::find(1);
-    $post->title='saved title';
-    $post->content='saved content';
-    $post->save();
+    $post->delete();
+
 
     return view('welcome');
 });
