@@ -24,8 +24,11 @@ Route::get('/', function () {
 //    $post->save();
 
 //查詢資料
-    $posts=\App\Post::all();
-    dd($posts);
+//    $posts=\App\Post::all();
+//    dd($posts);
+
+    $post=\App\Post::find(1);
+    dd($post);
 
     return view('welcome');
 });
