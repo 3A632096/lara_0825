@@ -51,7 +51,12 @@ Route::get('/', function () {
 
 //    \App\Post::destroy(2);
 
-    \App\Post::destroy(3,5,7);
+//    \App\Post::destroy(3,5,7);
+
+//練習 6：了解 Model 和 Collection 的差異
+    $allPosts=\App\Post::all();
+    dd($allPosts);
+
 
     return view('welcome');
 });
