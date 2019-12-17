@@ -56,9 +56,12 @@ Route::get('/', function () {
 //練習 6：了解 Model 和 Collection 的差異
 //    $allPosts=\App\Post::all();
 //    dd($allPosts);
-    $featuredPosts=\App\Post::where('is_feature',1)->get();
-    dd($featuredPosts);
+//    $featuredPosts=\App\Post::where('is_feature',1)->get();
+//    dd($featuredPosts);
 
+//取得 Model
+    $fourthPost=\App\Post::find(4);
+    dd($fourthPost);
 
 
     return view('welcome');
