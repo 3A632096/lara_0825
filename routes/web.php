@@ -60,8 +60,11 @@ Route::get('/', function () {
 //    dd($featuredPosts);
 
 //取得 Model
-    $fourthPost=\App\Post::find(4);
-    dd($fourthPost);
+//    $fourthPost=\App\Post::find(4);
+//    dd($fourthPost);
+    $lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);
+
 
 
     return view('welcome');
