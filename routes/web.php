@@ -54,8 +54,11 @@ Route::get('/', function () {
 //    \App\Post::destroy(3,5,7);
 
 //練習 6：了解 Model 和 Collection 的差異
-    $allPosts=\App\Post::all();
-    dd($allPosts);
+//    $allPosts=\App\Post::all();
+//    dd($allPosts);
+    $featuredPosts=\App\Post::where('is_feature',1)->get();
+    dd($featuredPosts);
+
 
 
     return view('welcome');
